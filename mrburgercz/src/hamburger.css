@@ -65,7 +65,7 @@
         }
         50% {
             transform: translateY(9px);
-            transition: transform .5s ease-in-out;
+            transition: transform .2s ease-in-out;
         }
         100% {
             transform: translateY(9.5px) rotate(45deg); /* Konečný stav */
@@ -78,7 +78,7 @@
         }
         50% {
             transform: translateY(-9px);
-            transition: transform .5s ease-in-out;
+            transition: transform .2s ease-in-out;
         }
         100% {
             transform: translateY(-9.5px) rotate(-45deg); /* Konečný stav */
@@ -86,15 +86,15 @@
     }
 
     .hamburger.active span:nth-child(1) {
-        animation: burger1open 1.5s ease-in-out forwards;
+        animation: burger1open .5s ease-in-out forwards;
     }
     .hamburger.active span:nth-child(2) {
         opacity: 0;
         transition: opacity 0s ease-in-out;
-        transition-delay: .5s;
+        transition-delay: .2s;
     }
     .hamburger.active span:nth-child(3) {
-        animation: burger3open 1.5s ease-in-out forwards;
+        animation: burger3open .5s ease-in-out forwards;
     }
     
     .hamburger-row.active {

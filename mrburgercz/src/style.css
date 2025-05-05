@@ -108,6 +108,7 @@ h1 {
   margin: 2px;
   background-color: var(--layer1);
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 .hamburger-nav a:first-child {
   border-top-left-radius: 22px; /* Větší zakulacení levého horního rohu */
@@ -119,6 +120,6 @@ h1 {
   border-bottom-right-radius: 22px; /* Větší zakulacení pravého spodního rohu */
 }
 .hamburger-nav a:hover {
-  background-color: var(--text);
-  color: var(--layer1)
+  filter: brightness(1.2);
+  transition: all 0.3s ease;
 }
