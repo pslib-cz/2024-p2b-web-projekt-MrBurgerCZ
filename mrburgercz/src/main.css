@@ -66,3 +66,8 @@ main {
     filter: grayscale(70%) brightness(0.8);
     transition: filter 0.3s ease;
 }
+.bluemap iframe {
+    border-radius: 8px;
+    border: none;
+    display: block;
+}

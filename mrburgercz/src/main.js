@@ -30,3 +30,9 @@ function copyToClipboard(text) {
       console.error("Chyba při kopírování: ", err);
   });
 }
+
+import { loadIframeOnResize } from './loadIframe.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadIframeOnResize();
+});
