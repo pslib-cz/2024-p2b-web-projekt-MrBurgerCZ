@@ -36,9 +36,9 @@
     right: -100%; /* Skryje nav mimo obrazovku vpravo */
     width: 100%; /* Zabírá celou šířku */
     height: 100%; /* Zabírá celou výšku */
-    background-color: var(--layer2); /* Barva pozadí */
+    background-color: var(--layer2); /* Barva pozadí */;
     transform: none; /* Odstraníme transform, protože používáme `right` */
-    transition: right .5s ease-in-out; /* Plynulý přechod */
+    transition: right .5s ease-in-out, background-color .3s ease; /* Plynulý přechod */
     z-index: 1000; /* Zajistí, že bude nad ostatními prvky */
 }
 
@@ -85,6 +85,39 @@
         }
     }
 
+    @keyframes burger1close {
+        0% {
+            transform: translateY(9.5px) rotate(45deg); /* Výchozí stav při zavření */
+        }
+        50% {
+            transform: translateY(9px);
+        }
+        100% {
+            transform: translateY(0) rotate(0); /* Konečný stav */
+        }
+    }
+
+    @keyframes burger3close {
+        0% {
+            transform: translateY(-9.5px) rotate(-45deg); /* Výchozí stav při zavření */
+        }
+        50% {
+            transform: translateY(-9px);
+        }
+        100% {
+            transform: translateY(0) rotate(0); /* Konečný stav */
+        }
+    }
+
+    @keyframes burger2close {
+        0% {
+            opacity: 0; /* Neviditelná čárka */
+        }
+        100% {
+            opacity: 1; /* Viditelná čárka */
+        }
+    }
+
     .hamburger.active span:nth-child(1) {
         animation: burger1open .5s ease-in-out forwards;
     }
@@ -121,18 +154,17 @@
     }
 
     .hamburger:not(.active) span:nth-child(1) {
-        animation: burger1close 1.5s ease-in-out forwards; /* Zavírací animace pro první čárku */
-        transform-origin: left; /* Otáčení kolem levého okraje */
+        animation: burger1close .5s ease-in-out forwards; /* Zavírací animace pro první čárku */
     }
-
+    
     .hamburger:not(.active) span:nth-child(2) {
-        animation: burger2close 1.5s ease-in-out forwards; /* Animace pro druhou čárku */
-        transition-delay: 0.2s; /* Zpoždění, aby se objevila po zavření křížku */
+        opacity: 1;
+        transition: opacity 0s ease-in-out;
+        transition-delay: .2s;
     }
-
+    
     .hamburger:not(.active) span:nth-child(3) {
-        animation: burger3close 1.5s ease-in-out forwards; /* Zavírací animace pro třetí čárku */
-        transform-origin: left; /* Otáčení kolem levého okraje */
+        animation: burger3close .5s ease-in-out forwards; /* Zavírací animace pro třetí čárku */
     }
 }
 

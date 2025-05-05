@@ -22,7 +22,7 @@
   color: var(--text);
   background-color: var(--bg);
 
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease, color .3s ease;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -58,6 +58,7 @@ h1 {
 .img_responsive {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .center {
@@ -87,7 +88,6 @@ h1 {
   display: block;
 }
 .hamburger-nav {
-  border-top: 2px solid var(--layer1);
   text-align: center;
 }
 .hamburger-nav ul {
@@ -110,16 +110,34 @@ h1 {
   border-radius: 4px;
   transition: all 0.3s ease;
 }
-.hamburger-nav a:first-child {
+.hamburger-links a:first-child {
   border-top-left-radius: 22px; /* Větší zakulacení levého horního rohu */
   border-top-right-radius: 22px; /* Větší zakulacení pravého horního rohu */
 }
 
-.hamburger-nav a:last-child {
+.hamburger-links a:last-child {
   border-bottom-left-radius: 22px; /* Větší zakulacení levého spodního rohu */
   border-bottom-right-radius: 22px; /* Větší zakulacení pravého spodního rohu */
 }
 .hamburger-nav a:hover {
-  filter: brightness(1.2);
+  background-color: var(--bg);
   transition: all 0.3s ease;
+}
+.hamburger-socials {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  gap: 1rem;
+  color: var(--text);
+  fill: var(--text);
+}
+.hamburger-socials a {
+  border-radius: 100px;
+  padding: .7rem;
+  color: var(--text);
+}
+svg {
+  display: block;
 }

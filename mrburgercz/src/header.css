@@ -10,7 +10,7 @@ header {
     gap: 0.5rem;
     padding: 1rem 2rem;
     background-color: var(--layer1);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease, color .3s ease;
     color: var(--text);
     box-sizing: border-box; /* Zahrne padding do šířky */
 }
