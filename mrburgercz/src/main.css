@@ -1,3 +1,7 @@
+main {
+    padding-top: 88px; /* Výška headeru */
+}
+
 .subh1 {
     margin-top: 0;
     text-align: center;
@@ -50,4 +54,15 @@
     background-color: var(--text);
     color: var(--layer1);
     transition: color 0.3s ease, background-color 0.3s ease;
+}
+.main-photo {
+    margin: 1rem;
+}
+.main-photo img {
+    border-radius: 24px;
+    transition: filter 0.3s ease;
+}
+.main-photo img:hover {
+    filter: grayscale(70%) brightness(0.8);
+    transition: filter 0.3s ease;
 }

@@ -1,0 +1,138 @@
+:root {
+    --rotate-time: 0.35s;
+    --move-time: 0.15s;
+}
+
+.hamburger {
+    width: 35px;
+    height: 22px;
+    position: relative;
+}
+  
+.hamburger span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--text);
+    border-radius: 4.5px;
+    left: 0;
+    }
+
+.hamburger span:nth-child(1) { 
+    top: 0px;
+}
+  
+.hamburger span:nth-child(2) { 
+    top: 9px;
+}
+  
+.hamburger span:nth-child(3) { 
+    bottom: 0px;
+}
+
+.hamburger-nav {
+    position: fixed; /* Fixuje nav na obrazovku */
+    top: 88px;
+    right: -100%; /* Skryje nav mimo obrazovku vpravo */
+    width: 100%; /* Zabírá celou šířku */
+    height: 100%; /* Zabírá celou výšku */
+    background-color: var(--layer2); /* Barva pozadí */
+    transform: none; /* Odstraníme transform, protože používáme `right` */
+    transition: right .5s ease-in-out; /* Plynulý přechod */
+    z-index: 1000; /* Zajistí, že bude nad ostatními prvky */
+}
+
+.hamburger-nav.active {
+    right: 0; /* Posune nav zpět na obrazovku */
+}
+
+@media screen and (max-width: 639px) {
+    .hamburger span:nth-child(1) {
+        transition: transform .1s ease-in-out;
+    }
+
+    .hamburger span:nth-child(2) {
+        transition: transform .1s ease-in-out;
+    }
+
+    .hamburger span:nth-child(3) {
+        transition: transform .1s ease-in-out;
+    }
+
+    @keyframes burger1open {
+        0% {
+            transform: translateY(0) rotate(0); /* Výchozí stav */
+        }
+        50% {
+            transform: translateY(9px);
+            transition: transform .5s ease-in-out;
+        }
+        100% {
+            transform: translateY(9.5px) rotate(45deg); /* Konečný stav */
+        }
+    }
+
+    @keyframes burger3open {
+        0% {
+            transform: translateY(0) rotate(0); /* Výchozí stav */
+        }
+        50% {
+            transform: translateY(-9px);
+            transition: transform .5s ease-in-out;
+        }
+        100% {
+            transform: translateY(-9.5px) rotate(-45deg); /* Konečný stav */
+        }
+    }
+
+    .hamburger.active span:nth-child(1) {
+        animation: burger1open 1.5s ease-in-out forwards;
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-in-out;
+        transition-delay: .5s;
+    }
+    .hamburger.active span:nth-child(3) {
+        animation: burger3open 1.5s ease-in-out forwards;
+    }
+    
+    .hamburger-row.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .hamburger-nav.active {
+
+    }
+
+    .hamburger-nav.active+main {
+        padding-top: 88px;
+    }
+
+    .hamburger span:nth-child(1) {
+        animation: none; /* Výchozí stav */
+    }
+
+    .hamburger span:nth-child(3) {
+        animation: none; /* Výchozí stav */
+    }
+
+    .hamburger:not(.active) span:nth-child(1) {
+        animation: burger1close 1.5s ease-in-out forwards; /* Zavírací animace pro první čárku */
+        transform-origin: left; /* Otáčení kolem levého okraje */
+    }
+
+    .hamburger:not(.active) span:nth-child(2) {
+        animation: burger2close 1.5s ease-in-out forwards; /* Animace pro druhou čárku */
+        transition-delay: 0.2s; /* Zpoždění, aby se objevila po zavření křížku */
+    }
+
+    .hamburger:not(.active) span:nth-child(3) {
+        animation: burger3close 1.5s ease-in-out forwards; /* Zavírací animace pro třetí čárku */
+        transform-origin: left; /* Otáčení kolem levého okraje */
+    }
+}
+

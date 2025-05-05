@@ -1,9 +1,18 @@
 header {
+    position: fixed; /* Fixuje header na vrchu obrazovky */
+    top: 0;
+    left: 0;
+    width: 100%; /* Zabírá celou šířku obrazovky */
+    z-index: 1000; /* Zajistí, že bude nad ostatními prvky */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
     padding: 1rem 2rem;
-
     background-color: var(--layer1);
     transition: background-color 0.5s ease;
     color: var(--text);
+    box-sizing: border-box; /* Zahrne padding do šířky */
 }
 header a {
     color: var(--text);

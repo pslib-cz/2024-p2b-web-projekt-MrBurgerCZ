@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrBurgerCZ</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <script src="./src/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MrBurgerCZ</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/hamburger.css">
+  <script src="./src/main.js" defer></script>
+  <script src="./src/hamburger.js"></script>
 
 </head>
+
 <body>
-    <header>
+  <header>
+      <a href="./index.html">
         <p><b>MrBurgerCZ</b></p>
-    </header>
-    <main>
+      </a>
       <div>
-        <h1>MrBurgerCZ</h1>
+        <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav class="hamburger-nav hamburger-zone">
+          <ul>
+            <a href="./index.html">Home</a>
+            <a href="./minecraft.html">Minecraft</a>
+            <a href="./gallery.html">Photography</a>
+            <a href="./contact.html">Contact</a>
+          </ul>
+        </nav>
       </div>
-        
-    </main>
-    <footer>
-        <p>© 2025 MrBurgerCZ • <a href="https://github.com/MrBurgerCZ">github</a></p>
-    </footer>
+  </header>
+  <main>
+    <div>
+      <h1 class="bigh1">MrBurgerCZ</h1>
+      <p class="subh1">(that's me)</p>
+    </div>
+    <div>
+      <p class="subh1">i am another random guy on the internet.</p>
+      <p class="subh1">some cool things i do in my free time:</p>
+    </div>
+    <div class="main-photo">
+      <img src="/bluemap.webp" alt="bluemap" class="img_responsive">
+    </div>
+    <div class="main-photo">
+      <img src="/PXL_20240823_184819644.webp" alt="photo of a road in the night" class="img_responsive">
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 MrBurgerCZ • <a href="https://github.com/MrBurgerCZ">github</a></p>
+  </footer>
 </body>
+
 </html>
