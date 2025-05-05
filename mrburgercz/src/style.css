@@ -1,0 +1,77 @@
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght@20..48,100..700&icon_names=content_copy");
+
+:root {
+  font-family: Alata;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  --text: #E2E3D8;
+  --bg: #12140E;
+  --bg-dim: #12140e;
+  
+
+  --layer1: #1E201A;
+  --layer2: #1A1C16;
+
+  color: var(--text);
+  background-color: var(--bg);
+
+  transition: background-color 0.5s ease;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'wght' 400,
+  'opsz' 24
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.img_responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #1A1C16;
+    --bg: #EEEFE3;
+    --layer1: #F9FAEF;
+    --layer2: #F3F4E9;
+    --bg-dim: #dadbd0;
+  }
+}

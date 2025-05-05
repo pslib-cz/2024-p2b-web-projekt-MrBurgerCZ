@@ -1,0 +1,53 @@
+.subh1 {
+    margin-top: 0;
+    text-align: center;
+}
+.bigh1 {
+    margin-bottom: 2px;
+}
+.minecraft-server {
+    margin: 2rem;
+    background-color: var(--layer2);
+    border-radius: 24px;
+    padding: 1rem;
+}
+.minecraft-server img {
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+.minecraft-server img:hover {
+    filter: grayscale(70%) brightness(0.8);
+    transition: filter 0.3s ease;
+}
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.server-info p {
+    margin: 0;
+    padding: 0.5rem;
+}
+.server-ip {
+    background-color: var(--bg-dim);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.server-ip p {
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+}
+.copy-button {
+    background-color: var(--layer1);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem .5rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.copy-button:hover {
+    background-color: var(--text);
+    color: var(--layer1);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
