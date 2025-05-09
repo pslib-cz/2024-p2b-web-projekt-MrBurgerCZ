@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MrBurgerCZ</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <script src="./src/main.js" defer></script>
-
-    <link rel="stylesheet" href="./src/hamburger.css">
-    <script src="./src/hamburger.js"></script>
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <link rel="stylesheet" href="/src/styles/hamburger.css">
 
 </head>
 
 <body>
     <header>
-        <a href="./index.html">
+        <a href="%BASE_URL%">
           <p><b>MrBurgerCZ</b></p>
         </a>
         <div>
@@ -25,8 +22,8 @@
           </a>
           <nav class="hamburger-nav hamburger-zone">
             <ul class="hamburger-links">
-              <a href="./index.html">Home</a>
-              <a href="./minecraft.html">Minecraft</a>
+              <a href="%BASE_URL%">Home</a>
+              <a href="./">Minecraft</a>
               <a href="./gallery.html">Photography</a>
               <a href="./contact.html">Contact</a>
             </ul>
@@ -115,5 +112,7 @@
         mq.addEventListener("change", handleResize);
       </script>
       
+  <script type="module" src="/src/scripts/hamburger.js"></script>
+  <script type="module" src="/src/scripts/main.js"></script>
 </body>
 </html>
