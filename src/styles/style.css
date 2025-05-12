@@ -140,6 +140,12 @@ h1 {
   padding: .7rem;
   color: var(--text);
 }
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; /* Skryje hamburger na větších obrazovkách */
+    }
+}
+
 svg {
   display: block;
 }

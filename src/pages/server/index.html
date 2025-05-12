@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrBurgerCZ</title>
+    <title>server • MrBurgerCZ</title>
   <link rel="stylesheet" href="/src/styles/style.css">
   <link rel="stylesheet" href="/src/styles/hamburger.css">
 
 </head>
 
 <body>
-    <header>
+
+  <header>
         <a href="%BASE_URL%">
-          <p><b>MrBurgerCZ</b></p>
+          <b>MrBurgerCZ • gallery</b>
         </a>
+        <div class="desktop-nav">
+            <ul class="desktop-links">
+                <li><a href="%BASE_URL%">Home</a></li>
+                <li><a href="%BASE_URL%server/">Server</a></li>
+                <li><a href="%BASE_URL%gallery/">Photography</a></li>
+                <li><a href="%BASE_URL%contact/">Contact</a></li>
+            </ul>
+        </div>
         <div>
           <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
             <span></span>
@@ -23,9 +32,9 @@
           <nav class="hamburger-nav hamburger-zone">
             <ul class="hamburger-links">
               <a href="%BASE_URL%">Home</a>
-              <a href="./">Minecraft</a>
-              <a href="./gallery.html">Photography</a>
-              <a href="./contact.html">Contact</a>
+              <a href="%BASE_URL%server/">Server</a>
+              <a href="%BASE_URL%gallery/">Photography</a>
+              <a href="%BASE_URL%contact/">Contact</a>
             </ul>
             <div class="hamburger-socials">
               <a href="https://instagram.com/mrburgercz"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
@@ -42,10 +51,6 @@
         </div>
     </header>
     <main>
-        <div>
-            <h1 class="bigh1">Minecraft</h1>
-            <p class="subh1">i run a minecraft server, too</p>
-        </div>
         <div class="minecraft-server">
             <div class="server-info">
                 <p>1.21.4</p>
@@ -65,7 +70,7 @@
     </footer>
     <script>
         const wrapper = document.getElementById("iframe-wrapper");
-        const mq = window.matchMedia("(min-width: 768px)");
+        const mq = window.matchMedia("(min-width: 900px)");
       
         function handleResize(e) {
           const existingIframe = wrapper.querySelector("iframe");

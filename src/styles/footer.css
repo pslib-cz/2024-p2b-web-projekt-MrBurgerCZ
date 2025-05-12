@@ -1,7 +1,18 @@
 footer {
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--layer1);
     transition: background-color 0.5s ease;
     padding: .2rem 0;
+}
+
+.desktop-socials {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-socials {
+        display: inherit;
+    }
 }
