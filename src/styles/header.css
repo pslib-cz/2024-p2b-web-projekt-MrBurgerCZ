@@ -23,6 +23,7 @@ header {
 header a {
     color: var(--text);
     text-decoration: none;
+    transition: all .3s ease;
 }
 
 .desktop-nav {
@@ -52,9 +53,11 @@ header a {
 @media (min-width: 768px) {
     header {
         background-color: var(--bg);
+        transition: background-color 0.3s ease, color .3s ease;
     }
     header a {
         font-size: 1.5rem;
+        transition: all .3s ease;
     }
 
     .desktop-nav {
