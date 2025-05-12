@@ -29,7 +29,7 @@ const wrapper = document.getElementById("iframe-bluemap");
           a.id = "iframe-placeholder";
 
           const img = document.createElement("img");
-          img.src = "images/bluemap.webp"; // náhled obrázku
+          img.src = "/images/bluemap.webp"; // náhled obrázku
           img.alt = "Mapa světa";
           img.className = "img_responsive";
 
