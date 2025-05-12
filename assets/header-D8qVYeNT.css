@@ -1,1 +1,0 @@
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:1rem 2rem;background-color:var(--layer1);transition:background-color .3s ease,color .3s ease;color:var(--text);box-sizing:border-box}header a{color:var(--text);text-decoration:none}@media (min-width: 600px){header{background-color:var(--bg)}}
