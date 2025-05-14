@@ -40,20 +40,31 @@ header a {
 
 .desktop-links li {
     text-align: center;
-    padding: .5rem 1.2rem;
-    border-radius: 100px;
 }
 
 .desktop-links li a {
+    border-radius: 100px;
     text-decoration: none;
     color: inherit;
     font-weight: bold;
     font-size: 1rem;
+    padding: .5rem 1.2rem;
 }
 
-.desktop-links li.active-page {
+.desktop-links li a:hover {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    transition: all .3s ease;
+}
+
+.desktop-links a.active-page {
     background-color: var(--secondary);
     color: var(--on-secondary);
+}
+
+.desktop-links a.active-page:hover {
+    background-color: var(--text);
+    color: var(--surface);
 }
 
 @media (min-width: 768px) {
