@@ -9,10 +9,10 @@
   <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
   <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/hamburger-DzGNCfwF.js"></script>
   <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/bluemap-iframe-loader-DIpm6Feb.js"></script>
-  <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/dashdot-iframe-BBBhMxFa.js"></script>
-  <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/main-B4i9pIsp.js"></script>
-  <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-MrBurgerCZ/assets/style-DnK8Anat.css">
-  <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-MrBurgerCZ/assets/hamburger-Dc8TwpJy.css">
+  <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/dashdot-iframe-NoamRN-w.js"></script>
+  <script type="module" crossorigin src="/2024-p2b-web-projekt-MrBurgerCZ/assets/main-Cv-g1Qgi.js"></script>
+  <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-MrBurgerCZ/assets/style-tOPSfCin.css">
+  <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-MrBurgerCZ/assets/hamburger-DXr0z45b.css">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
     <div class="desktop-nav">
       <ul class="desktop-links">
         <li><a href="/2024-p2b-web-projekt-MrBurgerCZ/">Home</a></li>
-        <li><a href="/2024-p2b-web-projekt-MrBurgerCZ/server/">Server</a></li>
-        <li><a href="/2024-p2b-web-projekt-MrBurgerCZ/gallery/">Photography</a></li>
+        <li class="active-page"><a href="/2024-p2b-web-projekt-MrBurgerCZ/server/">Server</a></li>
+        <li><a href="/2024-p2b-web-projekt-MrBurgerCZ/gallery/">Gallery</a></li>
         <li><a href="/2024-p2b-web-projekt-MrBurgerCZ/contact/">Contact</a></li>
       </ul>
     </div>
@@ -38,8 +38,8 @@
       <nav class="hamburger-nav hamburger-zone">
         <ul class="hamburger-links">
           <a href="/2024-p2b-web-projekt-MrBurgerCZ/">Home</a>
-          <a href="/2024-p2b-web-projekt-MrBurgerCZ/server/">Server</a>
-          <a href="/2024-p2b-web-projekt-MrBurgerCZ/gallery/">Photography</a>
+          <a class="active-page" href="/2024-p2b-web-projekt-MrBurgerCZ/server/">Server</a>
+          <a href="/2024-p2b-web-projekt-MrBurgerCZ/gallery/">Gallery</a>
           <a href="/2024-p2b-web-projekt-MrBurgerCZ/contact/">Contact</a>
         </ul>
         <div class="hamburger-socials">
@@ -77,9 +77,16 @@
         </div>
       </div>
       <p class="center">vanilla survival server with few simple plugins, running on my own server</p>
+
+      <!-- TODO: tlacitko uprostred obrazku, zadnej iframe -->
+       
+      <a class="primary-button" href="https://map.mrburger.cz">Bluemap</a>
       <div class="bluemap" id="iframe-bluemap"></div>
     </div>
     <div class="server-dash">
+      <div class="server-info">
+        <p>server load</p>
+      </div>
       <iframe id="dashdot" src="" allowtransparency="true" frameborder="0"></iframe>
     </div>
   </main>
