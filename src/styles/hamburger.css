@@ -3,8 +3,8 @@
 }
 
 .hamburger {
-    width: 37px;
-    height: 37px;
+    width: 45px;
+    height: 45px;
     position: relative;
     border-radius: 100px;
     transition: background-color var(--anim-lenght) ease;
@@ -18,10 +18,10 @@
 .hamburger span {
     position: absolute;
     height: 3px;
-    width: 66%;
+    width: 25px;
     background: var(--text);
     border-radius: 4.5px;
-    left: 6px;
+    left: 10px;
     
     transition: background-color var(--anim-lenght) ease;
     }
@@ -32,15 +32,15 @@
 }
 
 .hamburger span:nth-child(1) { 
-    top: 8px;
+    top: 12px;
 }
   
 .hamburger span:nth-child(2) { 
-    top: 17px;
+    top: 21px;
 }
   
 .hamburger span:nth-child(3) { 
-    bottom: 8px;
+    bottom: 12px;
 }
 
 .hamburger-nav {
