@@ -1,33 +1,46 @@
 :root {
-    --rotate-time: 0.35s;
-    --move-time: 0.15s;
+    --anim-lenght: .5s;
 }
 
 .hamburger {
-    width: 35px;
-    height: 22px;
+    width: 37px;
+    height: 37px;
     position: relative;
+    border-radius: 100px;
+    transition: background-color var(--anim-lenght) ease;
+}
+
+.hamburger.active {
+    background-color: var(--primary);
+    transition: background-color var(--anim-lenght) ease;
 }
   
 .hamburger span {
     position: absolute;
     height: 3px;
-    width: 100%;
+    width: 66%;
     background: var(--text);
     border-radius: 4.5px;
-    left: 0;
+    left: 6px;
+    
+    transition: background-color var(--anim-lenght) ease;
     }
 
+.hamburger.active span {
+    background-color: var(--on-primary);
+    transition: background-color var(--anim-lenght) ease;
+}
+
 .hamburger span:nth-child(1) { 
-    top: 0px;
+    top: 8px;
 }
   
 .hamburger span:nth-child(2) { 
-    top: 9px;
+    top: 17px;
 }
   
 .hamburger span:nth-child(3) { 
-    bottom: 0px;
+    bottom: 8px;
 }
 
 .hamburger-nav {
@@ -36,9 +49,9 @@
     right: -100%; /* Skryje nav mimo obrazovku vpravo */
     width: 100%; /* Zabírá celou šířku */
     height: 100%; /* Zabírá celou výšku */
-    background-color: var(--layer2); /* Barva pozadí */;
+    background-color: var(--surface-container); /* Barva pozadí */;
     transform: none; /* Odstraníme transform, protože používáme `right` */
-    transition: right .5s ease-in-out, background-color .3s ease; /* Plynulý přechod */
+    transition: right var(--anim-lenght) ease-in-out, background-color .3s ease; /* Plynulý přechod */
     z-index: 1000; /* Zajistí, že bude nad ostatními prvky */
 }
 
@@ -47,17 +60,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hamburger span:nth-child(1) {
-        transition: transform .1s ease-in-out;
-    }
-
-    .hamburger span:nth-child(2) {
-        transition: transform .1s ease-in-out;
-    }
-
-    .hamburger span:nth-child(3) {
-        transition: transform .1s ease-in-out;
-    }
 
     @keyframes burger1open {
         0% {
@@ -65,10 +67,9 @@
         }
         50% {
             transform: translateY(9px);
-            transition: transform .2s ease-in-out;
         }
         100% {
-            transform: translateY(9.5px) rotate(45deg); /* Konečný stav */
+            transform: translateY(9px) rotate(45deg); /* Konečný stav */
         }
     }
 
@@ -78,16 +79,15 @@
         }
         50% {
             transform: translateY(-9px);
-            transition: transform .2s ease-in-out;
         }
         100% {
-            transform: translateY(-9.5px) rotate(-45deg); /* Konečný stav */
+            transform: translateY(-9px) rotate(-45deg); /* Konečný stav */
         }
     }
 
     @keyframes burger1close {
         0% {
-            transform: translateY(9.5px) rotate(45deg); /* Výchozí stav při zavření */
+            transform: translateY(9px) rotate(45deg); /* Výchozí stav při zavření */
         }
         50% {
             transform: translateY(9px);
@@ -99,7 +99,7 @@
 
     @keyframes burger3close {
         0% {
-            transform: translateY(-9.5px) rotate(-45deg); /* Výchozí stav při zavření */
+            transform: translateY(-9px) rotate(-45deg); /* Výchozí stav při zavření */
         }
         50% {
             transform: translateY(-9px);
@@ -109,25 +109,16 @@
         }
     }
 
-    @keyframes burger2close {
-        0% {
-            opacity: 0; /* Neviditelná čárka */
-        }
-        100% {
-            opacity: 1; /* Viditelná čárka */
-        }
-    }
-
     .hamburger.active span:nth-child(1) {
-        animation: burger1open .5s ease-in-out forwards;
+        animation: burger1open var(--anim-lenght) ease-in-out forwards;
     }
     .hamburger.active span:nth-child(2) {
         opacity: 0;
-        transition: opacity 0s ease-in-out;
-        transition-delay: .2s;
+        transition: opacity 0s ease-in-out, background-color calc(var(--anim-lenght)/2) ease;
+        transition-delay: calc(var(--anim-lenght)/2);
     }
     .hamburger.active span:nth-child(3) {
-        animation: burger3open .5s ease-in-out forwards;
+        animation: burger3open var(--anim-lenght) ease-in-out forwards;
     }
     
     .hamburger-row.active {
@@ -135,10 +126,6 @@
         top: 0;
         left: 0;
         right: 0;
-    }
-
-    .hamburger-nav.active {
-
     }
 
     .hamburger-nav.active+main {
@@ -154,17 +141,17 @@
     }
 
     .hamburger:not(.active) span:nth-child(1) {
-        animation: burger1close .5s ease-in-out forwards; /* Zavírací animace pro první čárku */
+        animation: burger1close var(--anim-lenght) ease-in-out forwards; /* Zavírací animace pro první čárku */
     }
     
     .hamburger:not(.active) span:nth-child(2) {
         opacity: 1;
-        transition: opacity 0s ease-in-out;
-        transition-delay: .2s;
+        transition: opacity 0s ease-in-out, background-color calc(var(--anim-lenght)/2) ease;
+        transition-delay: calc(var(--anim-lenght)/2);
     }
     
     .hamburger:not(.active) span:nth-child(3) {
-        animation: burger3close .5s ease-in-out forwards; /* Zavírací animace pro třetí čárku */
+        animation: burger3close var(--anim-lenght) ease-in-out forwards; /* Zavírací animace pro třetí čárku */
     }
 }
 

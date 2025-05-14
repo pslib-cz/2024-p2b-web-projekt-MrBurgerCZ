@@ -19,8 +19,8 @@
     <div class="desktop-nav">
       <ul class="desktop-links">
         <li><a href="%BASE_URL%">Home</a></li>
-        <li><a href="%BASE_URL%server/">Server</a></li>
-        <li><a href="%BASE_URL%gallery/">Photography</a></li>
+        <li class="active-page"><a href="%BASE_URL%server/">Server</a></li>
+        <li><a href="%BASE_URL%gallery/">Gallery</a></li>
         <li><a href="%BASE_URL%contact/">Contact</a></li>
       </ul>
     </div>
@@ -33,8 +33,8 @@
       <nav class="hamburger-nav hamburger-zone">
         <ul class="hamburger-links">
           <a href="%BASE_URL%">Home</a>
-          <a href="%BASE_URL%server/">Server</a>
-          <a href="%BASE_URL%gallery/">Photography</a>
+          <a class="active-page" href="%BASE_URL%server/">Server</a>
+          <a href="%BASE_URL%gallery/">Gallery</a>
           <a href="%BASE_URL%contact/">Contact</a>
         </ul>
         <div class="hamburger-socials">
@@ -72,9 +72,16 @@
         </div>
       </div>
       <p class="center">vanilla survival server with few simple plugins, running on my own server</p>
+
+      <!-- TODO: tlacitko uprostred obrazku, zadnej iframe -->
+       
+      <a class="primary-button" href="https://map.mrburger.cz">Bluemap</a>
       <div class="bluemap" id="iframe-bluemap"></div>
     </div>
     <div class="server-dash">
+      <div class="server-info">
+        <p>server load</p>
+      </div>
       <iframe id="dashdot" src="" allowtransparency="true" frameborder="0"></iframe>
     </div>
   </main>

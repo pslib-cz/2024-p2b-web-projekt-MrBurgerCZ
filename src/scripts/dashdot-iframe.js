@@ -7,7 +7,7 @@ function setIframeTheme() {
   const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   const theme = isDarkMode ? "dark" : "light";
-  const color = isDarkMode ? "E2E3D8" : "1A1C16"; // Barva textu
+  const color = isDarkMode ? "B1D18A" : "4C662B"; // Barva textu
   const surface = isDarkMode ? "12140e" : "dadbd0"; // Barva pozadí
 
   const baseUrl = "https://dash.mrburger.cz?graph=cpu&showPercentage=true&innerRadius=0";

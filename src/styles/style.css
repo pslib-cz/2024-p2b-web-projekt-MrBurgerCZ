@@ -4,7 +4,7 @@
 
 @import "normalize.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght@20..48,100..700&icon_names=content_copy");
 
 :root {
@@ -13,16 +13,73 @@
   font-weight: 400;
 
   color-scheme: light dark;
+  /* GREEN THEME */
   --text: #E2E3D8;
-  --bg: #12140E;
-  --bg-dim: #12140e;
-  
+  --surface: #12140E;
+  --surface-dim: #12140e;
 
-  --layer1: #1E201A;
-  --layer2: #1A1C16;
+  --primary: rgb(177 209 138);
+  --on-primary: rgb(31 55 1);
+  --primary-container: rgb(53 78 22);
+  --on-primary-container: rgb(205 237 163);
+  --secondary: rgb(191 203 173);
+  --on-secondary: rgb(42 51 30);
+  --secondary-container: rgb(64 74 51);
+  --on-secondary-container: rgb(220 231 200);
+  --tertiary: rgb(160 208 203);
+  --on-tertiary: rgb(0 55 53);
+  --tertiary-container: rgb(31 78 75);
+  --on-tertiary-container: rgb(188 236 231);
+
+  --surface-container-low: #1E201A;
+  --surface-container: #1A1C16;
+
+  /* RED THEME */
+  /* --text: rgb(241 223 218);
+  --surface: rgb(26 17 15);
+  --surface-dim: rgb(26 17 15);
+
+  --primary: rgb(255 181 160);
+  --surface-tint: rgb(255 181 160);
+  --on-primary: rgb(86 31 15);
+  --primary-container: rgb(114 53 35);
+  --on-primary-container: rgb(255 219 209);
+  --secondary: rgb(231 189 178);
+  --on-secondary: rgb(68 42 34);
+  --secondary-container: rgb(93 64 55);
+  --on-secondary-container: rgb(255 219 209);
+  --tertiary: rgb(216 197 141);
+  --on-tertiary: rgb(59 47 5);
+  --tertiary-container: rgb(83 70 25);
+  --on-tertiary-container: rgb(245 225 167);
+
+  --surface-container-low: rgb(35 25 23);
+  --surface-container: rgb(39 29 27); */
+
+  /* BLUE THEME */
+  /* --text: rgb(222 227 229);
+  --surface: rgb(14 20 21);
+  --surface-dim: rgb(14 20 21);
+
+  --primary: rgb(130 211 225);
+  --surface-tint: rgb(130 211 225);
+  --on-primary: rgb(0 54 61);
+  --primary-container: rgb(0 79 88);
+  --on-primary-container: rgb(158 239 254);
+  --secondary: rgb(177 203 208);
+  --on-secondary: rgb(28 52 56);
+  --secondary-container: rgb(51 75 79);
+  --on-secondary-container: rgb(205 231 236);
+  --tertiary: rgb(187 198 234);
+  --on-tertiary: rgb(36 48 77);
+  --tertiary-container: rgb(59 70 101);
+  --on-tertiary-container: rgb(218 226 255);
+
+  --surface-container-low: rgb(23 29 30);
+  --surface-container: rgb(27 33 34); */
 
   color: var(--text);
-  background-color: var(--bg);
+  background-color: var(--surface);
 
   transition: background-color 0.3s ease, color .3s ease;
 
@@ -34,8 +91,8 @@
 
 .material-symbols-outlined {
   font-variation-settings:
-  'wght' 400,
-  'opsz' 24
+    'wght' 400,
+    'opsz' 24
 }
 
 body {
@@ -70,11 +127,70 @@ h1 {
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* GREEN THEME */
     --text: #1A1C16;
-    --bg: #EEEFE3;
-    --layer1: #F9FAEF;
-    --layer2: #F3F4E9;
-    --bg-dim: #dadbd0;
+    --surface: #EEEFE3;
+    --surface-dim: #dadbd0;
+
+    --primary: rgb(76 102 43);
+    --on-primary: rgb(255 255 255);
+    --primary-container: rgb(205 237 163);
+    --on-primary-container: rgb(53 78 22);
+    --secondary: rgb(88 98 73);
+    --on-secondary: rgb(255 255 255);
+    --secondary-container: rgb(220 231 200);
+    --on-secondary-container: rgb(64 74 51);
+    --tertiary: rgb(56 102 99);
+    --on-tertiary: rgb(255 255 255);
+    --tertiary-container: rgb(188 236 231);
+    --on-tertiary-container: rgb(31 78 75);
+
+    --surface-container-low: #F9FAEF;
+    --surface-container: #F3F4E9;
+
+    /* RED THEME */
+    /* --text: rgb(35 25 23);
+  --surface: rgb(255 248 246);
+  --surface-dim: rgb(232 214 210);
+
+  --primary: rgb(143 76 56);
+  --surface-tint: rgb(143 76 56);
+  --on-primary: rgb(255 255 255);
+  --primary-container: rgb(255 219 209);
+  --on-primary-container: rgb(114 53 35);
+  --secondary: rgb(119 87 78);
+  --on-secondary: rgb(255 255 255);
+  --secondary-container: rgb(255 219 209);
+  --on-secondary-container: rgb(93 64 55);
+  --tertiary: rgb(108 93 47);
+  --on-tertiary: rgb(255 255 255);
+  --tertiary-container: rgb(245 225 167);
+  --on-tertiary-container: rgb(83 70 25);
+
+  --surface-container-low: rgb(255 241 237);
+  --surface-container: rgb(252 234 229); */
+
+    /* BLUE THEME */
+    /* --text: rgb(23 29 30);
+    --surface: rgb(245 250 251);
+    --surface-dim: rgb(213 219 220);
+
+    --primary: rgb(0 104 116);
+    --surface-tint: rgb(0 104 116);
+    --on-primary: rgb(255 255 255);
+    --primary-container: rgb(158 239 254);
+    --on-primary-container: rgb(0 79 88);
+    --secondary: rgb(74 98 103);
+    --on-secondary: rgb(255 255 255);
+    --secondary-container: rgb(205 231 236);
+    --on-secondary-container: rgb(51 75 79);
+    --tertiary: rgb(83 94 125);
+    --on-tertiary: rgb(255 255 255);
+    --tertiary-container: rgb(218 226 255);
+    --on-tertiary-container: rgb(59 70 101);
+
+    --surface-container-low: rgb(239 245 246);
+    --surface-container: rgb(233 239 240); */
   }
 }
 
@@ -86,45 +202,67 @@ h1 {
   justify-content: flex-end;
   overflow-x: hidden;
 }
+
 .hamburger {
   display: block;
 }
+
 .hamburger-nav {
   text-align: center;
 }
+
 .hamburger-nav ul {
-  position: absolute; /* Absolutní pozice uvnitř rodiče */
-  top: 43%; /* Posune na 50 % výšky rodiče */
-  left: 50%; /* Posune na 50 % šířky rodiče */
-  transform: translate(-50%, -50%); /* Posune přesně na střed */
+  position: absolute;
+  /* Absolutní pozice uvnitř rodiče */
+  top: 43%;
+  /* Posune na 50 % výšky rodiče */
+  left: 50%;
+  /* Posune na 50 % šířky rodiče */
+  transform: translate(-50%, -50%);
+  /* Posune přesně na střed */
   margin: 0;
   padding: 1rem;
   display: flex;
-  flex-direction: column; /* Položky pod sebou */
+  flex-direction: column;
+  /* Položky pod sebou */
   text-align: center;
+  width: 300px;
 }
+
 .hamburger-nav a {
   font-size: 2rem;
   display: block;
   padding: 0.25em 1.5em;
   margin: 2px;
-  background-color: var(--layer1);
+  background-color: var(--surface-container-low);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
+
+.hamburger-nav a:hover {
+  background-color: var(--surface);
+  transition: all 0.3s ease;
+}
+
+.hamburger-links .active-page {
+  background-color: var(--secondary) !important;
+  color: var(--on-secondary);
+}
+
 .hamburger-links a:first-child {
-  border-top-left-radius: 22px; /* Větší zakulacení levého horního rohu */
-  border-top-right-radius: 22px; /* Větší zakulacení pravého horního rohu */
+  border-top-left-radius: 22px;
+  /* Větší zakulacení levého horního rohu */
+  border-top-right-radius: 22px;
+  /* Větší zakulacení pravého horního rohu */
 }
 
 .hamburger-links a:last-child {
-  border-bottom-left-radius: 22px; /* Větší zakulacení levého spodního rohu */
-  border-bottom-right-radius: 22px; /* Větší zakulacení pravého spodního rohu */
+  border-bottom-left-radius: 22px;
+  /* Větší zakulacení levého spodního rohu */
+  border-bottom-right-radius: 22px;
+  /* Větší zakulacení pravého spodního rohu */
 }
-.hamburger-nav a:hover {
-  background-color: var(--bg);
-  transition: all 0.3s ease;
-}
+
 .hamburger-socials {
   position: absolute;
   bottom: 2rem;
@@ -132,18 +270,29 @@ h1 {
   transform: translate(-50%, -100%);
   display: flex;
   gap: 1rem;
-  color: var(--text);
-  fill: var(--text);
+  color: var(--on-tertiary-container);
+  fill: var(--on-tertiary-container);
 }
+
+.hamburger-socials :hover {
+  fill: var(--on-tertiary);
+}
+
 .hamburger-socials a {
   border-radius: 100px;
   padding: .7rem;
-  color: var(--text);
+  background-color: var(--tertiary-container);
 }
+
+.hamburger-socials a:hover {
+  background-color: var(--tertiary);
+}
+
 @media (min-width: 768px) {
-    .hamburger {
-        display: none; /* Skryje hamburger na větších obrazovkách */
-    }
+  .hamburger {
+    display: none;
+    /* Skryje hamburger na větších obrazovkách */
+  }
 }
 
 svg {
