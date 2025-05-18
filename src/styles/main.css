@@ -1,15 +1,25 @@
 main {
     padding: 0 2rem;
-    padding-top: 88px; /* Výška headeru */
+    padding-top: 88px;
+    /* Výška headeru */
+}
+
+iframe {
+    clip-path: inset(0 round 8px);
+    border: none;
+    display: block;
+    overflow: hidden;
 }
 
 .subh1 {
     margin: .5rem 0;
     text-align: center;
 }
+
 .bigh1 {
     margin-bottom: 2px;
 }
+
 .minecraft-server {
     margin: 2rem auto;
     background-color: var(--surface-container);
@@ -17,34 +27,32 @@ main {
     padding: 1rem;
     max-width: 800px;
 }
-.minecraft-server img {
-    border-radius: 8px;
-    transition: filter 0.3s ease;
-}
-.minecraft-server img:hover {
-    filter: grayscale(70%) brightness(0.8);
-    transition: filter 0.3s ease;
-}
+
+
 .server-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
 }
+
 .server-info p {
     margin: 0;
     padding: 0.5rem;
 }
+
 .server-ip {
     background-color: var(--surface-dim);
     border-radius: 8px;
     display: flex;
     align-items: center;
 }
+
 .server-ip p {
     margin: 0;
     padding: 0.5rem 1.5rem;
 }
+
 .copy-button {
     background-color: var(--tertiary-container);
     color: var(--on-tertiary-container);
@@ -53,27 +61,25 @@ main {
     padding: 0.5rem .5rem;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .copy-button:hover {
     background-color: var(--tertiary);
     color: var(--on-tertiary);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .main-photo {
     margin: 1rem;
 }
+
 .main-photo img {
     border-radius: 24px;
     transition: filter 0.3s ease;
 }
+
 .main-photo img:hover {
     filter: grayscale(70%) brightness(0.8);
     transition: filter 0.3s ease;
-}
-iframe {
-    clip-path: inset(0 round 8px);
-    border: none;
-    display: block;
-    overflow: hidden;
 }
 
 .main-page {
@@ -97,17 +103,81 @@ iframe {
     width: 100%;
 }
 
-.primary-button {
-    background-color: var(--primary);
-    color: var(--on-primary);
+.btn_on_img {
+    position: relative;
+    display: inline-block;
+    margin: 1rem auto;
+}
+
+.btn_on_img p {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
     border: none;
     border-radius: 8px;
     padding: 0.5rem 1.5rem;
     transition: color 0.3s ease, background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
-.primary-button:hover {
-    background-color: var(--primary-container);
-    color: var(--on-primary-container);
+
+.btn_on_img:hover p {
+    background-color: var(--primary);
+    color: var(--on-primary);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.btn_on_img img {
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+.btn_on_img:hover img {
+    filter: grayscale(0.7) brightness(0.6);
+    transition: filter 0.3s ease;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--surface-container);
+    border-radius: 24px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    /* Zakáže roztahování textarea */
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border: none;
+    border-radius: 100px;
+    margin: auto;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+}
