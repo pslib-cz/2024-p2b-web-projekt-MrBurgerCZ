@@ -163,8 +163,9 @@ iframe {
     border: none;
     border-radius: 8px;
     resize: none;
-    /* Zakáže roztahování textarea */
     box-sizing: border-box;
+    background-color: var(--surface-dim);
+    color: var(--text);
 }
 
 .contact-form button {
