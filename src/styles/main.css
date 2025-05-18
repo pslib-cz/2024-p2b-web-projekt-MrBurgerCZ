@@ -89,6 +89,8 @@ iframe {
     justify-content: center;
     margin: auto;
     max-width: 800px;
+    gap: 1rem;
+    margin: 1rem auto;
 }
 
 .server-dash {
@@ -105,8 +107,7 @@ iframe {
 
 .btn_on_img {
     position: relative;
-    display: inline-block;
-    margin: 1rem auto;
+    display: block;
 }
 
 .btn_on_img p {
@@ -132,6 +133,7 @@ iframe {
 .btn_on_img img {
     border-radius: 8px;
     transition: filter 0.3s ease;
+    display: block;
 }
 
 .btn_on_img:hover img {
