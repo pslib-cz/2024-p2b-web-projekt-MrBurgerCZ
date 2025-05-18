@@ -15,11 +15,6 @@
 }
 
 .hamburger.active {
-    background-color: var(--primary);
-    transition: background-color var(--anim-lenght) ease;
-}
-
-.hamburger.active:hover {
     background-color: var(--primary-container);
     transition: background-color var(--anim-lenght) ease;
 }
@@ -41,11 +36,6 @@
 }
 
 .hamburger.active span {
-    background-color: var(--on-primary);
-    transition: background-color var(--anim-lenght) ease;
-}
-
-.hamburger.active:hover span {
     background-color: var(--on-primary-container);
     transition: background-color var(--anim-lenght) ease;
 }

@@ -11,10 +11,11 @@ main {
     margin-bottom: 2px;
 }
 .minecraft-server {
-    margin: 2rem 0;
+    margin: 2rem auto;
     background-color: var(--surface-container);
     border-radius: 24px;
     padding: 1rem;
+    max-width: 800px;
 }
 .minecraft-server img {
     border-radius: 8px;
@@ -80,14 +81,16 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:auto;
+    margin: auto;
+    max-width: 800px;
 }
 
 .server-dash {
-    margin: 2rem 0;
+    margin: 2rem auto;
     background-color: var(--surface-container);
     border-radius: 24px;
     padding: 1rem;
+    max-width: 800px;
 }
 
 .server-dash iframe {
@@ -108,11 +111,3 @@ iframe {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-
-
-
-@media (min-width: 768px) {
-    .main-page {
-        max-width: 800px;
-    }
-}
