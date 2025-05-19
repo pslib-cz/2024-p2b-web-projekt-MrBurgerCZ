@@ -98,11 +98,22 @@ iframe {
     background-color: var(--surface-container);
     border-radius: 24px;
     padding: 1rem;
+    padding-top: 0;
     max-width: 800px;
 }
 
 .server-dash iframe {
     width: 100%;
+}
+
+.button {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin: 1rem 0 .5rem 0;
 }
 
 .btn_on_img {
